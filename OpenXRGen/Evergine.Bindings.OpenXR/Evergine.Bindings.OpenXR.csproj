@@ -1,27 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
-		<Copyright>Copyright (c) Evergine 2024</Copyright>
-		<Authors>Evergine Team</Authors>
-		<Company>Plain Concepts</Company>
-		<Description>Low-level bindings for OpenXR used in Evergine</Description>
-		<RepositoryUrl>https://github.com/EvergineTeam/OpenXR.NET</RepositoryUrl>
-		<PackageIcon>icon.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifiers>linux-x64;linux-arm64;osx-x64;osx-arm64;win-x64;win-arm64</RuntimeIdentifiers>
+    <Copyright>Copyright (c) Evergine 2024</Copyright>
+    <Authors>Evergine Team</Authors>
+    <Company>Plain Concepts</Company>
+    <Description>Low-level bindings for OpenXR used in Evergine</Description>
+    <RepositoryUrl>https://github.com/EvergineTeam/OpenXR.NET</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-	</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="false" />
-		<None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
-	</ItemGroup>
-	
+  <ItemGroup>
+    <None Include="..\..\icon.png" Pack="true" PackagePath="\" Visible="false" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" Visible="false" />
+  </ItemGroup>
+
 </Project>
